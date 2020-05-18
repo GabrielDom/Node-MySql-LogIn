@@ -1,0 +1,25 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each files}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                        <h4 class="card-title text-uppercase">
+                            {{this}}
+                        </h4>
+                     <a class="btn btn-primary" href="/download?filename={{this}}">
+                        Download 
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>There are not files saved yet.</p>
+                <a href="/links/add">Upload One!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
